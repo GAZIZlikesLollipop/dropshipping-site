@@ -19,7 +19,7 @@ export const metadata = {
 };
 
 const CartIcon = () => (
-  <Link href="/about">
+  <Link href="/cart">
     <img
       src="/cart.svg"  
       alt="Home Icon"
@@ -30,7 +30,7 @@ const CartIcon = () => (
 );
 
 const UserIcon = () => (
-  <Link href="/about">
+  <Link href="/user">
     <img
       src="/user.svg"  
       alt="Home Icon"
@@ -40,12 +40,13 @@ const UserIcon = () => (
   </Link>
 );
 
-const SearchIcon = () => (
+const SearchIcon = ({onClick}) => (
     <img
       src="/search.svg"  
       alt="Home Icon"
       width="32"
       height="32"
+      onClick={onClick}
     />
 );
 

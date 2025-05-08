@@ -2,25 +2,27 @@
 
 import { useState } from "react";
 import styles from "./page.module.css";
+import ProductCard from "./components"
+import Product from "./components"
 
 export default function Home() {
-  const [count, setCount] = useState(0);
-  const text = "hello";
-  const products = ["egegge","jgjejgjfe","ebebebe"];
-
-  const handleButton = () => {
-    setCount(count + 1);
-  };
+    const producta = {
+        id: "1",
+        name: "Куртка",
+        about: "Зимняя, теплая куртка.",
+        price: 199.99,
+        imageUrl: "/jacket.jpg"
+    };
+    const products = ["home","human","cum"];
 
   return (
     <div className={styles.container}>
-        <ul>
+        <ProductCard product=producta></ProductCard>
+        <ul className={styles.container}>
             {products.map((item, index) => (
             <li className={styles.text} key={index}>{item}</li>
             ))}
         </ul>
-        <p className={styles.text}>{count}</p>
-        <button onClick={handleButton} className={styles.button}>click me</button>
     </div>
   );
 }
