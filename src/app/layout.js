@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
                     <p className={styles.headLine}>Shop</p>
                 </Link>
                 
-                <input placeHolder="Searh..." className={styles.textField}>
+                <input placeholder="Searh..." className={styles.textField}>
                 </input>
                 <SearchIcon></SearchIcon>
                 <UserIcon></UserIcon>
